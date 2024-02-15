@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            background-color: rgb(red, green, blue);
+        }
+    </style>
+</head>
+<body>
+   <div class="parent">
+    <div class="day">Monday</div>
+    <div class="day">Tuesday</div>
+    <div class="day">Wednesday</div>
+    <div class="day">Thursday</div>
+   </div>
+
+   <ul class="langs">
+    <li class="lan">Java-Script</li>
+    <li class="lan">C++</li>
+    <li class="lan">Php</li>
+    <li class="lan">Python</li>
+   </ul>
+   <script>
+    // function day(day){
+    //     let div = document.createElement('div')
+    //     div.appendChild(document.createTextNode(day))
+    //     document.querySelector('.parent').appendChild(div)
+    //     return div
+    // }
+
+    // let res = day("Friday")
+    // day('Saturday')
+    // day('Sunday')
+
+        // ------------------------------------------------------------------//
+        //                  RANDOM COLOR RGB
+    // let day = document.querySelector('.day')
+    // day.style.backgroundColor = `rgb(${Math.floor(Math.random()*255+1)},${Math.floor(Math.random()*255+1)},${Math.floor(Math.random()*255+1)})`
+
+    // day.style.color = `rgb(${Math.floor(Math.random()*255+1)},${Math.floor(Math.random()*255+1)},${Math.floor(Math.random()*255+1)})`
+
+    // console.log(Math.floor(Math.random()*255+1))
+       //------------------------------------------------------------------//
+
+    // function div(count){
+        
+    //     for(i=1; i<=count ; i++){
+    //         let div1 = document.createElement('div')
+    //         div1.appendChild(document.createTextNode(`${i}`))
+    //         let parent = document.querySelector('.parent').appendChild(div1)
+    //     }
+        
+    // }
+
+    // let res = div(5)
+
+    ////////////////////////////////////
+    //EDIT
+    let li2 = document.querySelector('li:nth-child(2)')
+    let newLi = document.createElement('li')
+    newLi.innerText = "Mojo"
+    li2.replaceWith(newLi)
+
+    //EDIT
+    let firstlang = document.querySelector('li:first-child')
+    firstlang.outerHTML = '<li>Type-Script</li>'
+
+   </script>
+</body>
+</html>

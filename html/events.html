@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 17vw;
+        }
+    </style>
+</head>
+<body>
+    <ul id="images">
+        <li><img src="../../Downloads/1322767.png" alt="" id="gojo1"></li>
+        <li><img src="../../Downloads/1325351.png" alt="" id="gojo2"></li>
+        <li><img src="../../Downloads/1329536.jpeg" alt="" id="gojo3"></li>
+        <li><img src="../../Downloads/1332281.jpeg" alt="" id="gojo4"></li>
+        <li><a href="http://google.com" id="google">GOOGLE</a></li>
+    </ul>
+    <script>
+        // document.getElementById('gojo1').onclick = function(){
+        //     alert('gojo click')
+        // }
+
+        // attachEvent()
+        // jQuery - on
+
+        // type, timestamp, defaultPrevented
+        // target, toElement, srcElement, currentTarget,
+        // clientX, clientY, screenX, screenY
+        // altket, ctrlkey, shiftkey, keyCode
+
+        //////////////////////////////////////////////////////////////////
+
+        // document.getElementById('gojo1').addEventListener('click', function(e){
+        //     console.log(e)
+        // },false)
+
+        ///////////////////////////////////////////////////////////////////
+        
+        // document.getElementById('images').addEventListener('click', function(e){
+        //     console.log('click inside ul')
+        // },false)
+
+        // document.getElementById('gojo1').addEventListener('click', function(e){
+        //     console.log('gojo clicked')
+        //     e.stopPropagation()
+        // },false)
+
+        // document.getElementById('google').addEventListener('click',function(e){
+        //     e.preventDefault()
+        //     e.stopPropagation()
+        //     console.log('google clicked');
+        // },false)
+
+        ///////////////////////////////////////////////////////////////////
+
+        document.querySelector('#images').addEventListener('click', function(e){
+            // console.log(e.target);
+            console.log(e.target.parentNode);
+            console.log(e.target.tagName);
+            if(e.target.tagName === 'IMG'){
+                console.log(e.target.id)
+                let removeit = e.target.parentNode
+                removeit.remove()
+            }    
+            
+        },false)
+
+
+        // removeit.parentNode.removeChild(removeit)
+    </script>
+</body>
+</html>

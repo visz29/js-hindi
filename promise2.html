@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let promise1 = new Promise(function(resolve,reject){
+
+            setTimeout(() => {
+                     
+            let error = true
+            if(!error){
+                resolve({name:"vishal",pass:"123"})
+            }else{
+                reject("some Problem")
+            }
+
+        }, 2000);
+        })
+
+       
+        async function asyncpromise1(){
+            try {
+                let data = await promise1
+                console.log(data);
+            }
+            catch(error){
+                console.log(error);
+            }
+        }
+
+        asyncpromise1()
+    </script>
+</body>
+</html>
